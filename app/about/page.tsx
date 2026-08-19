@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Target, Users, Award, BookOpen } from 'lucide-react';
+import { Logo } from '@/components/Logo';
 
 export const metadata = { title: 'About — Tevexxo' };
 
@@ -14,7 +15,9 @@ export default function AboutPage() {
   return (
     <div className="bg-slate-50">
       <header className="hero-grid relative overflow-hidden pb-16 pt-28">
-        <div className="container relative z-10">
+        <div className="container relative z-10 flex items-center gap-4">
+          <Logo className="h-12 w-12" />
+          <div>
           <p className="eyebrow text-orange-400">ABOUT US</p>
           <h1 className="mt-2 max-w-2xl text-4xl font-black tracking-tight text-white sm:text-5xl">
             We turn curiosity into <span className="text-orange-500">careers.</span>
@@ -22,6 +25,7 @@ export default function AboutPage() {
           <p className="mt-4 max-w-xl text-sm text-slate-300">
             Tevexxo is a technology training platform built by practitioners. We help learners move from first principles to shipped projects, with mentorship at every step.
           </p>
+          </div>
         </div>
       </header>
       <section className="container -mt-8 grid gap-4 pb-20 sm:grid-cols-2 lg:grid-cols-4">

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { courses } from '@/lib/tevexxo-data';
+import { Logo } from '@/components/Logo';
 
 export const metadata = { title: 'Courses — Tevexxo' };
 
@@ -8,7 +9,9 @@ export default function CoursesPage() {
   return (
     <div className="bg-slate-50">
       <header className="hero-grid relative overflow-hidden pb-16 pt-28">
-        <div className="container relative z-10">
+        <div className="container relative z-10 flex items-center gap-4">
+          <Logo className="h-12 w-12" />
+          <div>
           <p className="eyebrow text-orange-400">OUR COURSES</p>
           <h1 className="mt-2 max-w-2xl text-4xl font-black tracking-tight text-white sm:text-5xl">
             Explore every path to a <span className="text-orange-500">future-ready</span> career.
@@ -16,6 +19,7 @@ export default function CoursesPage() {
           <p className="mt-4 max-w-xl text-sm text-slate-300">
             Six industry-aligned programs designed with mentors who build real systems every day.
           </p>
+          </div>
         </div>
       </header>
       <section className="container -mt-8 pb-20">

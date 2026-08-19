@@ -1,4 +1,7 @@
+import Link from 'next/link';
+import { ExternalLink, Github } from 'lucide-react';
 import { projects } from '@/lib/tevexxo-data';
+import { Logo } from '@/components/Logo';
 
 export const metadata = { title: 'Projects — Tevexxo' };
 
@@ -6,7 +9,9 @@ export default function ProjectsPage() {
   return (
     <div className="bg-slate-50">
       <header className="hero-grid relative overflow-hidden pb-16 pt-28">
-        <div className="container relative z-10">
+        <div className="container relative z-10 flex items-center gap-4">
+          <Logo className="h-12 w-12" />
+          <div>
           <p className="eyebrow text-orange-400">REAL WORLD PROJECTS</p>
           <h1 className="mt-2 max-w-2xl text-4xl font-black tracking-tight text-white sm:text-5xl">
             Build. Showcase. <span className="text-orange-500">Get Hired.</span>
@@ -14,6 +19,7 @@ export default function ProjectsPage() {
           <p className="mt-4 max-w-xl text-sm text-slate-300">
             Every program ends with portfolio-grade projects that mirror what teams ship in production.
           </p>
+          </div>
         </div>
       </header>
       <section className="container -mt-8 grid gap-5 pb-20 lg:grid-cols-3">
@@ -43,6 +49,17 @@ export default function ProjectsPage() {
                 {project.technologies.map((tech) => (
                   <span key={tech} className="rounded bg-orange-50 px-2 py-1 text-[10px] font-semibold text-orange-600">{tech}</span>
                 ))}
+              </div>
+              <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4 text-[10px] font-semibold">
+                <a href={`https://tevexxo.com/demo/${project.slug}`} target="_blank" rel="noopener noreferrer" className="flex items-center text-slate-600 hover:text-orange-500">
+                  <ExternalLink size={13} className="mr-1" />Live Demo
+                </a>
+                <a href={`https://github.com/tevexxo/${project.slug}`} target="_blank" rel="noopener noreferrer" className="flex items-center text-slate-600 hover:text-orange-500">
+                  <Github size={13} className="mr-1" />Source Code
+                </a>
+                <Link href={`/projects/${project.slug}`} className="text-orange-500 hover:underline">
+                  View
+                </Link>
               </div>
             </div>
           </article>

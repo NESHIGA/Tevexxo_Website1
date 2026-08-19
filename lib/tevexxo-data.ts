@@ -25,6 +25,7 @@ export type Course = {
 
 export type Project = {
   title: string;
+  slug: string;
   description: string;
   technologies: string[];
   color: string;
@@ -51,9 +52,9 @@ export const courses: Course[] = [
 ];
 
 export const projects: Project[] = [
-  { title: 'E-Commerce Platform', description: 'Full-stack e-commerce app with payments, admin dashboard and analytics.', technologies: ['MERN', 'Stripe', 'Tailwind', 'Redux'], color: 'from-violet-950 via-slate-900 to-blue-950', views: '350+' },
-  { title: 'AI Complaint System', description: 'AI-powered complaint classification and smart response system.', technologies: ['Python', 'FastAPI', 'ML Model', 'PostgreSQL'], color: 'from-slate-950 via-orange-950 to-slate-800', views: '420+' },
-  { title: 'Cybersecurity Monitoring Dashboard', description: 'Real-time threat monitoring and security analytics dashboard.', technologies: ['Python', 'React', 'Chart.js', 'MongoDB'], color: 'from-slate-950 via-blue-950 to-cyan-950', views: '380+' },
+  { title: 'E-Commerce Platform', slug: 'e-commerce-platform', description: 'Full-stack e-commerce app with payments, admin dashboard and analytics.', technologies: ['MERN', 'Stripe', 'Tailwind', 'Redux'], color: 'from-violet-950 via-slate-900 to-blue-950', views: '350+' },
+  { title: 'AI Complaint System', slug: 'ai-complaint-system', description: 'AI-powered complaint classification and smart response system.', technologies: ['Python', 'FastAPI', 'ML Model', 'PostgreSQL'], color: 'from-slate-950 via-orange-950 to-slate-800', views: '420+' },
+  { title: 'Cybersecurity Monitoring Dashboard', slug: 'cybersecurity-monitoring-dashboard', description: 'Real-time threat monitoring and security analytics dashboard.', technologies: ['Python', 'React', 'Chart.js', 'MongoDB'], color: 'from-slate-950 via-blue-950 to-cyan-950', views: '380+' },
 ];
 
 export const testimonials = [
